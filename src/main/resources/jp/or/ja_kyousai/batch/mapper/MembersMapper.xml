@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jp.or.ja_kyousai.batch.mapper.MembersMapper">
+	<insert id="insert">
+		INSERT INTO
+		MEMBERS(id, name, value)
+		VALUES(#{id},#{name},#{value})
+	</insert>
+	<delete id="delete" parameterType="String">
+		DELETE FROM MEMBERS WHERE ID = #{id}
+	</delete>
+	<delete id="truncate">
+		TRUNCATE TABLE MEMBERS
+	</delete>
+</mapper>
